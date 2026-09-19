@@ -78,3 +78,72 @@ int main() {
 
 **Simple Array** - `O(V^2)`
 Binary Heap ( Min-Heap ) - `O((V+E) log V)`
+
+
+### Kruskal's Algorithm
+
+Given a weighted undirected graph, we wanted to find a substree of this graph which connects all vertices and has the least weight ( i.e. the sum of the wights of all the edges is minimum ). This is called minimum spanning tree.
+
+```cpp
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int parent[100005], rnk[100005];
+
+int find(int x){
+    if(parent[x] != x) parent[x] = find(parent[x]); // path compression
+    return parent[x];
+}
+
+bool unite(int a, int b){
+    a = find(a); b = find(b);
+    if(a == b) return false; // already connected
+    if(rnk[a] < rnk[b]) swap(a, b);
+    parent[b] = a;
+    if(rnk[a] == rnk[b]) rnk[a]++;
+    return true;
+}
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n, m;
+    cin >> n >> m;
+
+    vector<array<int,3>> edges(m); // {cost, a, b}
+    for(int i = 0; i < m; i++){
+        int a, b, c;
+        cin >> a >> b >> c;
+        edges[i] = {c, a, b};
+    }
+
+    sort(edges.begin(), edges.end()); // sort by cost ascending
+
+    for(int i = 1; i <= n; i++){
+        parent[i] = i;
+        rnk[i] = 0;
+    }
+
+    ll totalCost = 0;
+    int edgesUsed = 0;
+
+    for(auto &e : edges){
+        int c = e[0], a = e[1], b = e[2];
+        if(unite(a, b)){
+            totalCost += c;
+            edgesUsed++;
+        }
+    }
+
+    if(edgesUsed == n - 1){
+        cout << totalCost << "\n";
+    } else {
+        cout << "IMPOSSIBLE\n";
+    }
+
+    return 0;
+}
+```

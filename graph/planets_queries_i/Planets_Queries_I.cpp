@@ -12,6 +12,8 @@ const ll MAXN = 2e5 + 5;
 const ll MAXD = 30;
 int parents[MAXN][MAXD];
 
+// Binary Lifting problem
+
 int main(){
     ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
