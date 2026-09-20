@@ -15,6 +15,7 @@ ll find(ll x){
     return parent[x];
 }
 
+// Kruskal's Algorithm
 bool unite(ll a, ll b){
     a = find(a);
     b = find(b);
