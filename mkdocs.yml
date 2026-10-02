@@ -86,6 +86,10 @@ nav:
     - Low Level:
       - Amazon Locker: low-level-system-design-interview/amazon-locker.md
       - LLD Delivery Framework: low-level-system-design-interview/lld-delivery-framework.md
+      - Parking Lot: low-level-system-design-interview/parking-lot.md
+      - Object Oriented Concepts: low-level-system-design-interview/object-oriented.md
+      - Design Principles: low-level-system-design-interview/design-principles.md
+      - Design Patterns: low-level-system-design-interview/design-patterns.md
     - Deep Dives:
       - Caching Deep Dive: deep-dives/caching-deep-dive.md
       - Distributed Transaction: deep-dives/distributed-transaction.md

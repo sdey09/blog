@@ -1,3 +1,5 @@
+# Parking Lot
+
 A parking lot system manages vehicle parking across multiple spots. When a vehicle enters, the system assigns an available spot matching the vehicle type and issues a ticket. When the vehicle exits, the system calculates the parking fee based on time spent and frees up the spot for the next customer.
 
 ## Requirements:
