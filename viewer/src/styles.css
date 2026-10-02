@@ -21,3 +21,40 @@
   opacity: 0.6;
   font-size: 0.9rem;
 }
+
+.excalidraw-embed-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.excalidraw-embed-inner--fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--md-default-bg-color, #fff);
+}
+
+.excalidraw-fullscreen-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: 6px;
+  background: var(--md-default-bg-color, #fff);
+  color: var(--md-default-fg-color, #333);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.excalidraw-fullscreen-toggle:hover {
+  background: var(--md-default-fg-color--lightest, #f5f5f5);
+}

@@ -12,6 +12,7 @@ function getMkdocsTheme() {
 function ExcalidrawEmbed({ src }) {
   const [scene, setScene] = useState(null);
   const [theme, setTheme] = useState(getMkdocsTheme());
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     fetch(src)
@@ -29,20 +30,50 @@ function ExcalidrawEmbed({ src }) {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!isFullscreen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsFullscreen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isFullscreen]);
+
   if (!scene) {
     return <div className="excalidraw-loading">Loading drawing…</div>;
   }
 
   return (
-    <Excalidraw
-      initialData={{
-        elements: scene.elements,
-        appState: { ...scene.appState, theme },
-        scrollToContent: true,
-      }}
-      viewModeEnabled
-      theme={theme}
-    />
+    <div
+      className={
+        isFullscreen ? "excalidraw-embed-inner excalidraw-embed-inner--fullscreen" : "excalidraw-embed-inner"
+      }
+    >
+      <button
+        type="button"
+        className="excalidraw-fullscreen-toggle"
+        onClick={() => setIsFullscreen((v) => !v)}
+        title={isFullscreen ? "Exit fullscreen" : "Fullscreen"}
+        aria-label={isFullscreen ? "Exit fullscreen" : "Fullscreen"}
+      >
+        {isFullscreen ? "✕" : "⛶"}
+      </button>
+      <Excalidraw
+        key={isFullscreen}
+        initialData={{
+          elements: scene.elements,
+          appState: { ...scene.appState, theme },
+          scrollToContent: true,
+        }}
+        viewModeEnabled
+        theme={theme}
+      />
+    </div>
   );
 }
 
