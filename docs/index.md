@@ -1,7 +1,5 @@
 ## Sections
 
-| Section |
-|---|
-| [CSES](cses.md) |
-| [Leetcode](leetcode.md) |
-| [Notes](dsa_notes/index.md) |
+| CSES | Leetcode | Notes |
+|---|---|---|
+| [CSES](cses.md) | [Leetcode](leetcode.md) | [Notes](dsa_notes/index.md) |
