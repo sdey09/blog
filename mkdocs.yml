@@ -85,6 +85,7 @@ nav:
       - Youtube System Design: high-level-system-design-interview/youtube-system-design.md
     - Low Level:
       - Amazon Locker: low-level-system-design-interview/amazon-locker.md
+      - LLD Delivery Framework: low-level-system-design-interview/lld-delivery-framework.md
     - Deep Dives:
       - Caching Deep Dive: deep-dives/caching-deep-dive.md
       - Distributed Transaction: deep-dives/distributed-transaction.md
