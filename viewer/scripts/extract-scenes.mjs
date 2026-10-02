@@ -8,10 +8,10 @@ const docsDir = path.join(__dirname, "..", "..", "docs");
 const assetsDir = path.join(docsDir, "assets", "excalidraw");
 
 const folders = [
-  "Deep dives",
-  "Designing Data Intensive Application",
-  "High Level System Design Interview",
-  "Low Level System Design Interview",
+  "deep-dives",
+  "designing-data-intensive-application",
+  "high-level-system-design-interview",
+  "low-level-system-design-interview",
 ];
 
 function slugify(name) {

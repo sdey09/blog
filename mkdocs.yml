@@ -77,19 +77,19 @@ nav:
     - Labyrinth: graph/labyrinth.md
   - System Design:
     - High Level:
-      - Back of the Envelope Calculation: High Level System Design Interview/Back of the Envelope Calculation.md
-      - BookMyShow Designing: High Level System Design Interview/BookMyShow Designing.md
-      - Design a URL Shortner: High Level System Design Interview/Design a URL Shortner.md
-      - Designing a Rate Limiter: High Level System Design Interview/Designing a Rate Limited.md
-      - Distributed Message Queues: High Level System Design Interview/Distributed Message Queues.md
-      - Youtube System Design: High Level System Design Interview/Youtube System Design.md
+      - Back of the Envelope Calculation: high-level-system-design-interview/back-of-the-envelope-calculation.md
+      - BookMyShow Designing: high-level-system-design-interview/bookmyshow-designing.md
+      - Design a URL Shortner: high-level-system-design-interview/design-a-url-shortner.md
+      - Designing a Rate Limiter: high-level-system-design-interview/designing-a-rate-limited.md
+      - Distributed Message Queues: high-level-system-design-interview/distributed-message-queues.md
+      - Youtube System Design: high-level-system-design-interview/youtube-system-design.md
     - Low Level:
-      - Amazon Locker: Low Level System Design Interview/Amazon Locker.md
+      - Amazon Locker: low-level-system-design-interview/amazon-locker.md
     - Deep Dives:
-      - Caching Deep Dive: Deep dives/Caching Deep Dive.md
-      - Distributed Transaction: Deep dives/Distributed Transaction.md
-      - Kafka Deep Dive: Deep dives/Kafka Deep Dive.md
+      - Caching Deep Dive: deep-dives/caching-deep-dive.md
+      - Distributed Transaction: deep-dives/distributed-transaction.md
+      - Kafka Deep Dive: deep-dives/kafka-deep-dive.md
     - Designing Data Intensive Application:
-      - Data Models and Query Language: Designing Data Intensive Application/2. Data models and Query Language.md
-      - Storage and Retrieval: Designing Data Intensive Application/3. Storage and Retrieval.md
-      - Distributed Data: Designing Data Intensive Application/5. Distributed Data.md
+      - Data Models and Query Language: designing-data-intensive-application/2-data-models-and-query-language.md
+      - Storage and Retrieval: designing-data-intensive-application/3-storage-and-retrieval.md
+      - Distributed Data: designing-data-intensive-application/5-distributed-data.md
