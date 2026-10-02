@@ -2,9 +2,6 @@
 
 <div class="excalidraw-embed" data-src="assets/excalidraw/low-level-system-design-interview/lld-delivery-framework.json"></div>
 
-### Approach
-
-![file:/Users/subhojitdey/Documents/cses/Screenshot%202026-10-02%20at%2010.37.29%20AM.png](file:///Users/subhojitdey/Documents/cses/Screenshot%202026-10-02%20at%2010.37.29%20AM.png)
 ### 1. Requirements (~ 5 minutes)
 
 Every low-level design interview begins with a prompt.
